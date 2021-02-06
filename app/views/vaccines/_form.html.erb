@@ -1,0 +1,37 @@
+<%= form_with(model: vaccine) do |form| %>
+  <% if vaccine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vaccine.errors.count, "error") %> prohibited this vaccine from being saved:</h2>
+
+      <ul>
+        <% vaccine.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    
+    <%= form.text_field :name,
+       class:"form-control",
+       placeholder:"Vaccine Name" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :antigen %>
+    <%= form.text_field :antigen,
+       class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :code %>
+    <%= form.text_field :code,
+       class:"form-control" %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit class:'btn
+       btn-secondary'%>
+  </div>
+<% end %>

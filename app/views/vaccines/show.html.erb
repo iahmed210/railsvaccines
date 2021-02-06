@@ -1,0 +1,19 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @vaccine.name %>
+</p>
+
+<p>
+  <strong>Antigen:</strong>
+  <%= @vaccine.antigen %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @vaccine.code %>
+</p>
+
+<%= link_to 'Edit', edit_vaccine_path(@vaccine), class:"btn btn-secondary" %> 
+<%= link_to 'Back', vaccines_path, class:"btn btn-secondary" %>
